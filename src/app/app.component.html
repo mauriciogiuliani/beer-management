@@ -1,16 +1,93 @@
 <clr-main-container>
-  <clr-header>
-      ...
-  </clr-header>
-  <nav class="subnav" [clr-nav-level]="1">
-      ...
-  </nav>
-  <div class="content-container">
-      <main class="content-area">
-          ...
-      </main>
-      <nav class="sidenav" [clr-nav-level]="2">
-          ...
-      </nav>
-  </div>
+    <clr-header>
+
+
+
+        <div class="header-nav" [clr-nav-level]="1">
+            <div class="branding">
+                <!-- <a href="javascript://" class="active nav-link nav-text">Receitas</a> -->
+            </div>
+            <a href="javascript://" class="active nav-link nav-text">Receitas</a>
+            <!-- <a href="javascript://" class="nav-link nav-text">Produzir</a> -->
+        </div>
+        <!-- <div class="header-actions">
+            <a href="javascript://" class="nav-link nav-icon" aria-label="settings">
+                <clr-icon shape="cog"></clr-icon>
+            </a>
+        </div> -->
+
+    </clr-header>
+    <div class="content-container">
+
+        <main class="content-area">
+            <div class="clr-row">
+                <div class="clr-col-sm-1 clr-col-lg-3">
+                    <a (click)="expandReceipt()" style="text-decoration: none;">
+
+                        <div class="card clickable">
+                            <div class="card-header">
+                                Blonde Ale
+                            </div>
+                            <div class="card-block">
+                                <!-- <div class="card-title">
+                                    Detalhes
+                            </div> -->
+                                    <div class="card-text">
+                                        9 kg - Pilsen <br>
+                                    1 kg - Malte Carahell <br>
+                                    2 kg - Malte CaraGold <br>
+
+                                    </div>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+                <div class="clr-col-sm-1 clr-col-lg-3">
+                    <div class="card clickable">
+                        <div class="card-header">
+                            APA Amarillo
+                        </div>
+                        <div class="card-block">
+                            <!-- <div class="card-title">
+                                Malt
+                            </div> -->
+                            <div class="card-text">
+                                <!-- 9 kg - Pilsen
+                                1 kg - Malte Carahell
+                                2 kg - Malte CaraGold -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clr-col-sm-1 clr-col-lg-3">
+                    <div class="card clickable">
+                        <div class="card-header">
+                            Red Ale
+                        </div>
+                        <div class="card-block">
+                            <!-- <div class="card-title">
+                                Malt
+                            </div> -->
+                            <div class="card-text">
+                                <!-- 9 kg - Pilsen
+                                1 kg - Malte Carahell
+                                2 kg - Malte CaraGold -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+    </div>
 </clr-main-container>
