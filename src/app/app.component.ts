@@ -8,9 +8,20 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'beer-management';
+  showDetails = false;
+  showDetails2 = false;
+  showDetails3 = false;
 
-  expandReceipt() {
-    console.log("AAA")
+  detailsAction(index: number) {
+    if(index == 1) {
+      this.showDetails = !this.showDetails;
+    } else if(index == 2) {
+      this.showDetails2 = !this.showDetails2;
+    } else if(index == 3) {
+      this.showDetails3 = !this.showDetails3;
+    }
+
+    
   }
 }
 
