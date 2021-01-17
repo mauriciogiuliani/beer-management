@@ -1,0 +1,151 @@
+<clr-datagrid>
+    <clr-dg-column>Job Name</clr-dg-column>
+    <clr-dg-column>Type</clr-dg-column>
+    <clr-dg-column>Method</clr-dg-column>
+    <clr-dg-column>Last Execution</clr-dg-column>
+    <clr-dg-column>Status</clr-dg-column>
+
+    <clr-dg-row *clrDgItems="let user of users" [clrDgItem]="user">
+        <clr-dg-cell>
+            <span style="display: flex; align-items: center; height: 100%;">
+                {{user.jobName}}
+            </span>
+        </clr-dg-cell>
+        <clr-dg-cell>
+            <span style="display: flex; align-items: center; height: 100%;">
+                {{user.type}}
+            </span>
+        </clr-dg-cell>
+        <clr-dg-cell>
+            <span style="display: flex; align-items: center; height: 100%;">
+                {{user.method}}
+            </span>
+        </clr-dg-cell>
+        <clr-dg-cell>
+            <span style="display: flex; align-items: center; height: 100%;">
+                {{user.lastExecution}}
+            </span>
+        </clr-dg-cell>
+
+        <clr-dg-cell>
+            <div style="display: flex; align-items: center; height: 100%;">
+
+                <div *ngIf="user.status === 'SUCCESS'" class="alert alert-success alert-sm" role="alert"
+                    style="width: 100px">
+                    <div class="alert-items">
+                        <div class="alert-item static">
+                            <div class="alert-icon-wrapper">
+                                <clr-icon class="alert-icon" shape="check-circle"></clr-icon>
+                            </div>
+                            <span class="alert-text" style="display: flex; justify-content: center;">
+                                Success
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="user.status === 'RUNNING'" class="alert alert-warning alert-sm" role="alert"
+                    style="width: 100px">
+                    <div class="alert-items">
+                        <div class="alert-item static">
+                            <div class="alert-icon-wrapper">
+                                <clr-icon style="color: var(--clr-alert-warning-border-color);" shape="hourglass"></clr-icon>
+                            </div>
+                            <span class="alert-text" style="display: flex; justify-content: center;">
+                                Running
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="user.status === 'FAILED'" class="alert alert-danger alert-sm" role="alert"
+                    style="width: 100px">
+                    <div class="alert-items">
+                        <div class="alert-item static">
+                            <div class="alert-icon-wrapper">
+                                <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+                            </div>
+                            <span class="alert-text" style="display: flex; justify-content: center;">
+                                Failed
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="user.status === 'ON_HOLD'" class="alert alert-info alert-sm" role="alert"
+                    style="width: 100px">
+                    <div class="alert-items">
+                        <div class="alert-item static">
+                            <div class="alert-icon-wrapper" style="display: flex; align-items: center;">
+                                <clr-icon style="color: var(--clr-alert-info-border-color);" c shape="pause"></clr-icon>
+                            </div>
+                            <span class="alert-text" style="display: flex; justify-content: center;">
+                                On Hold
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="user.status === 'SCHEDULED'" class="alert alert-sm" role="alert"
+                    style="width: 100px" background="#CCC">
+                    <div class="alert-items">
+                        <div class="alert-item static">
+                            <div class="alert-icon-wrapper" style="display: flex; align-items: center;">
+                                <clr-icon style="color: var(--clr-alert-info-border-color);" c shape="pause"></clr-icon>
+                            </div>
+                            <span class="alert-text" style="display: flex; justify-content: center;">
+                                Scheduled
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-detail *clrIfDetail="let detail">
+        <clr-dg-detail-header>{{detail.jobName}}</clr-dg-detail-header>
+
+        <clr-dg-detail-body>
+            <div id="details-body" style="margin-bottom: 15px">
+
+
+                <div>
+                    <b>Description: </b> Pack documents into zip files that should be sent to the Print Vendor
+                </div>
+                <div>
+                    <b>Type: </b> {{detail.type}}
+                </div>
+                <div>
+                    <b>Status: </b> {{detail.status}}
+                </div>
+                <div>
+                    <b>API: </b> {{detail.api}}
+                </div>
+                <div>
+                    <b>Method: </b> {{detail.method}}
+                </div>
+                <div>
+                    <b>Last Execution: </b> {{detail.lastExecution}}
+                </div>
+                <div>
+                    <b>Next Execution: </b> {{detail.lastExecution}}
+                </div>
+
+                <div style="display: flex; justify-content: flex-end;">
+                    <button class="btn btn-primary">Logs</button>
+                    <button *ngIf="detail.enabled === true && detail.status !== 'RUNNING'" class="btn btn-danger">Hold
+                        Job</button>
+                    <button *ngIf="detail.enabled === true && detail.status === 'RUNNING'" class="btn btn-danger">Kill
+                        Job</button>
+                    <button *ngIf="detail.enabled === false" class="btn btn-success">Release Job</button>
+
+                </div>
+            </div>
+        </clr-dg-detail-body>
+
+    </clr-dg-detail>
+
+    <!-- ... -->
+</clr-datagrid>

@@ -1,3 +1,121 @@
 .details-collapsed {
     display: none;
 }
+
+.header-test {
+    background-color: #527c88;
+}
+
+
+/* CLARITY */
+
+.main-container header {
+    flex: 0 0 250px;
+}
+
+
+/* RANI */
+
+.rani-header {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+}
+
+.rani-header-logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    padding: 25px;
+    border-bottom: 1px solid #CCC;
+}
+
+.rani-header-menu-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.rani-header-menu-container a {
+    color: #2F4858;
+    font-size: 16px;
+    margin: 15px 15px;
+}
+
+.rani-header-menu-container a:hover {
+    color: rgb(47 72 88 / 0.5);
+    text-decoration: none;
+}
+
+.rani-header-sticky {
+    width: 100%;
+    position: sticky;
+    background-color: #FFF;
+    border-bottom: 1px solid #CCC;
+    height: 0px;
+    padding: 10px;
+    top: 0;
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+}
+
+.rani-header-sticky-container {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    /* margin: 0px auto; */
+}
+
+.rani-header-sticky-logo-container {
+    margin: 0px 45px;
+}
+
+.rani-header-sticky-menu-container {
+    display: flex;
+    margin: 0px 50px;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+}
+
+.rani-header-sticky-menu-container a {
+    color: #2F4858;
+    font-size: 16px;
+    margin: 15px 15px;
+}
+
+.rani-header-sticky-menu-container a:hover {
+    color: rgb(47 72 88 / 0.5);
+    text-decoration: none;
+}
+
+.rani-header-sticky-social-media-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100px;
+}
+
+.rani-header-sticky-social-media-container a {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+
+.icon-youtube {
+    background-image: url("../assets/youtube.svg");
+}
+
+.icon-youtube:hover {
+    background-image: url("../assets/youtube-red.svg");
+    cursor: pointer;
+}
