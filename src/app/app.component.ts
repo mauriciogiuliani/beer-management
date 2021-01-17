@@ -7,22 +7,29 @@ import { Component, HostListener } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'beer-management';
+  title = 'Slurry Rani';
   showDetails = false;
   showDetails2 = false;
   showDetails3 = false;
 
-  detailsAction(index: number) {
-    if (index == 1) {
-      this.showDetails = !this.showDetails;
-    } else if (index == 2) {
-      this.showDetails2 = !this.showDetails2;
-    } else if (index == 3) {
-      this.showDetails3 = !this.showDetails3;
-    }
 
+  menuOpened : boolean = false;
 
+  toogleMenu() : void {
+    this.menuOpened = !this.menuOpened
   }
+
+  // detailsAction(index: number) {
+  //   if (index == 1) {
+  //     this.showDetails = !this.showDetails;
+  //   } else if (index == 2) {
+  //     this.showDetails2 = !this.showDetails2;
+  //   } else if (index == 3) {
+  //     this.showDetails3 = !this.showDetails3;
+  //   }
+
+
+  // }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any) {

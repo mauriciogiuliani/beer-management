@@ -1,15 +1,43 @@
-<!-- <clr-main-container> -->
-<!-- <clr-header> -->
+<!-- HEADER - MOBILE -->
+<div id="header-mobile" class="rani-header-mobile">
+    <div class="rani-header-mobile-menu">
+        <img style="height: 75px; width: 75px;" src="../assets/rani1.png" alt="..." />
 
-<!-- <div class="main-container"> -->
-<!-- <div (scroll)="onWindowScroll($event)" class="main-container"> -->
-<!-- <header> -->
-<div id="header-main" class="rani-header">
-    <div class="rani-header-logo-container">
 
-        <img style="height: 200px; width: 200px;" src="../assets/rani1.png" alt="..." />
+        <a (click)="toogleMenu()">
+            <span class="icon icon-menu-mobile">
+            </span>
+        </a>
 
     </div>
+
+    <div [ngClass]="{'rani-header-mobile-menu-opened': menuOpened}" class="rani-header-mobile-menu-closed">
+        <a href="">HOME</a>
+        <a href="javascript://">ABOUT ME</a>
+        <a href="javascript://">LATEST HITS</a>
+        <a href="javascript://">SHOP</a>
+        <a href="javascript://">CONTACT</a>
+    </div>
+
+
+
+    <!-- <div id="header-main-menu" class="rani-header-menu-container">
+            <a href="">HOME</a>
+            <a href="javascript://">ABOUT ME</a>
+            <a href="javascript://">LATEST HITS</a>
+            <a href="javascript://">SHOP</a>
+            <a href="javascript://">CONTACT</a>
+    
+        </div> -->
+</div>
+
+
+<!-- HEADER - MAIN -->
+<div id="header-main" class="rani-header">
+    <div class="rani-header-logo-container">
+        <img style="height: 200px; width: 200px;" src="../assets/rani1.png" alt="..." />
+    </div>
+
     <div id="header-main-menu" class="rani-header-menu-container">
         <a href="">HOME</a>
         <a href="javascript://">ABOUT ME</a>
@@ -20,6 +48,7 @@
     </div>
 </div>
 
+<!-- HEADER - FIXED -->
 <div id="header-fixed" class="rani-header-sticky">
     <div id="header-fixed-container" class="rani-header-sticky-container">
         <div class="rani-header-sticky-logo-container">
@@ -36,7 +65,6 @@
         <div class="rani-header-sticky-social-media-container">
             <a href="https://www.youtube.com/channel/UC73OeIqekX3HE5mAMMIHSdg" target="_blank">
                 <span class="icon icon-youtube">
-
                 </span>
             </a>
 
