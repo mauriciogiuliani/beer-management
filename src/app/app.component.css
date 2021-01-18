@@ -65,19 +65,21 @@
 .rani-header-sticky-container {
     display: flex;
     margin: auto;
-    width: 60%;
+    justify-content: space-between;
+    /* width: 60%; */
     /* margin: 0px auto; */
 }
 
 .rani-header-sticky-logo-container {
-    margin: 0px 45px;
+    /* margin: 0px 45px; */
+    margin: auto;
 }
 
 .rani-header-sticky-menu-container {
     display: flex;
-    margin: 0px 50px;
+    margin: auto;
     align-items: center;
-    width: 50%;
+    /* width: 50%; */
     justify-content: center;
 }
 
@@ -97,6 +99,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100px;
+    margin: auto;
 }
 
 .rani-header-sticky-social-media-container a {
@@ -215,7 +218,7 @@
     border: 0px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     .rani-header-mobile {
         display: none;
     }
@@ -225,7 +228,7 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .rani-header {
         display: none;
     }
