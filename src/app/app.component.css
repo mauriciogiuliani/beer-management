@@ -132,6 +132,8 @@
 /* MOBILE */
 
 .rani-header-mobile {
+    top: 0;
+    position: fixed;
     display: flex;
     flex-direction: column;
 }
