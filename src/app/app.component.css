@@ -160,6 +160,7 @@
 }
 
 .rani-header-mobile-menu-opened {
+    background-color: #FFF;
     display: flex;
     flex-direction: column;
     align-items: center;
